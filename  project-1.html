@@ -7,8 +7,14 @@
 </head>
 <body>
     <h1>123</h1>
-    <img width="200" src="image/333.jpeg" alt="img1">
-    <img width="200" src="image/111.webp" alt="img2">
-    <p><strong>Lorem <em>ipsum</em> dolor</strong> sit amet consectetur adipisicing elit.</p>
+    <!-- <img width="200" src="image/111.webp" alt="img1">
+    <img width="200" src="image/222.jpeg" alt="img2">
+    <p><strong>Lorem <em>ipsum</em> dolor</strong> sit amet consectetur adipisicing elit.</p> -->
+        <picture>
+            <source srcset="image/111.webp" media="(max-width: 500px)">
+            <source srcset="image/222.jpeg" media="(max-width: 700px)">
+            <source srcset="image/333.jpeg" media="(max-width: 900px)">
+            <img width="300" src="Dog_jpg.jpeg" alt="img1">
+        </picture>
 </body>
 </html>
