@@ -18,21 +18,30 @@
 
 //  hi(hey)
 
-const list = [1, 2, 3, 4, 5]
-const newList = []
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const double = (x) => {return x * 2}
-const newArray = list.map(double)
-const result = list.reduce(function(acc , cv){
-    return acc + cv
-})
-console.log(result);
+const odd = (n) => n % 2 == 0
+const sum = (acc, cv) => acc + cv * cv
 
-for (let i = 0;i < 4;i ++){
-    const value = list[i]*2
-    newList.push(value)
-}
+const result = list
+.filter(odd)
+.reduce(sum) 
+  
+  console.log(result);
+// const newList = []
 
-console.log(list);
-console.log(newList);
-console.log(newArray);
+// const double = (x) => {return x * 2+x}
+// const newArray = list.map(double)
+// const result = list.reduce(function(acc , cv){
+//     return acc + cv
+// })
+// console.log(result);
+
+// for (let i = 0;i < 4;i ++){
+//     const value = list[i]*2
+//     newList.push(value)
+// }
+
+// console.log(list);
+// console.log(newList);
+// console.log(newArray);
