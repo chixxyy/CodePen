@@ -1,14 +1,15 @@
-/* p{
-    color: red;
-    background-color: black;
-}
-h1{
-    color: blue;
-    background-color: green;
-    } */
-    #ppp{
-        color: blue;
-    }
-    .ddd{
+.lihead ~ li{
         color: red;
-    }
+}
+a:visited{
+    color: blue;
+}
+a:hover{
+    color: yellow;
+}
+a:focus{
+    color: purple;
+}
+a:active{
+    color: orange;
+}
