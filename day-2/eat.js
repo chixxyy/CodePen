@@ -45,3 +45,8 @@ const result = list
 // console.log(list);
 // console.log(newList);
 // console.log(newArray);
+
+const newlist = [`abc`, `abcd`, `abcde`, `abcdef`, `abcdefg`]
+
+newlist.sort((a, b) => a.length - b.length);
+console.log(newlist);
