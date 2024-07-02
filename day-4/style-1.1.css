@@ -12,3 +12,23 @@ p{
     line-height: 50px; 
     text-indent: 10px;
 }
+.box1{
+    background-color: whitesmoke;
+    width: 200px;
+    height: 200px;
+    background-image: url(../image/view1.jpg);
+    background-size: 180px 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px black;
+}
+.box2{
+    background-color: whitesmoke;
+    width: 200px;
+    height: 200px;
+    background-image: url(../image/view2.jpg);
+    background-size: 180px 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px black;
+}
