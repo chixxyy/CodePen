@@ -1,34 +1,69 @@
-h1{
-    color: red;
-    font-size: 50px;
-}
-span{
-    font-size: 40px;
-}
-p{
-    font-size: 1em;
-    font-style: italic;
-    font-weight: bold;
-    line-height: 50px; 
-    text-indent: 10px;
-}
 .box1{
     background-color: whitesmoke;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-image: url(../image/view1.jpg);
-    background-size: 180px 180px;
+    background-size: 230px 230px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px black;
+    border: 1px solid black;
+    margin-bottom: 10px;
 }
 .box2{
     background-color: whitesmoke;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-image: url(../image/view2.jpg);
-    background-size: 180px 180px;
+    background-size: 230px 230px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px black;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.box3{
+    background-color: whitesmoke;
+    width: 250px;
+    height: 250px;
+    background-image: url(../image/view3.jpg);
+    background-size: 230px 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.box4{
+    background: whitesmoke url(../image/view4.jpg) center no-repeat;
+    width: 250px;
+    height: 250px;
+    background-size: 230px 230px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+div:hover{
+    background-image: url(../image/view5.jpg);
+}
+html{
+    background-image: url(../image/view5.jpg);
+    background-size: contain;
+    scroll-behavior: smooth;
+}
+header {
+    height: 60px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+section{
+    display: inline-block;
+    width: 255px;
 }
