@@ -118,7 +118,7 @@ li {
     margin-top: 20px;
     background-color: tan;
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
 }
 #footerh2{
     font-size: 50px;
@@ -141,4 +141,7 @@ li {
 .footer-social img{
     width: 30px;
     filter: invert();
+}
+.vipp{
+    padding-top: 10px;
 }
