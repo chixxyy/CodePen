@@ -44,6 +44,14 @@ li {
     padding: 15px 10px;
     margin: 15px 10px;
 }
+.cardbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardbutton:hover{
+    background-color: tan;
+}
 .crad:last-child{
     margin: 0;
 }
@@ -125,23 +133,43 @@ li {
     font-weight: bold;
     text-align: center;
 }
+
 #footera{
     font-size: 30px;
     text-decoration: none;
 }
+
 .footer-social {
     padding-left: 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
+
 .footer-social li{
    list-style: none;
 }
+
 .footer-social img{
     width: 30px;
     filter: invert();
 }
+
 .vipp{
     padding-top: 10px;
+}
+
+#box1id{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+}
+.buttonbox{
+    display: flex;
+    justify-content: center;
+}
+.imgg{
+    height: 132px;
 }
