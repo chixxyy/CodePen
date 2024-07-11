@@ -1,0 +1,26 @@
+.box-content {
+    width: 200px;
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 0;
+    text-align: center;
+}
+.box-img {
+    background-image: url(../image/view2.jpg);
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.box-content:hover {
+    opacity: 0.5;
+    color: red;
+}
+.items {
+    margin-top: 20px;
+    width: 50px;
+    background-color: green;
+    display: flex;
+    flex-direction: column-reverse;
+}
