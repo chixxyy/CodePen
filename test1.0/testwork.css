@@ -2,55 +2,83 @@
     margin: 0;
     padding: 0;
 }
+
 .header-icon {
     width: 150px;
     height: 28px;
     margin-left: 6px;
     margin-top: 8px;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     position: fixed;
+    height: 64px;
     width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     background-color: white;
+    align-items: center;
     z-index: 10;
 }
-.header-nav{
+
+.header-nav {
     display: flex;
     gap: 2rem;
     font-weight: bold;
     margin: 6px 6px;
 }
+
 .header-nav a {
     text-decoration: none;
     color: black;
+    position: relative; /* 讓 a 元素可以作為相對定位的容器 */
 }
-.nav-li{
+
+.nav-li {
     list-style: none;
 }
+
 .li-btn {
     position: relative;
 }
-.nav-a {
-    display: none;
-    flex-wrap: wrap;
-    border: 1px solid #000;
-    width: 116px;
-    height: 88px;
-}
-.li-btn:hover .nav-a{
-    display: block;
-}
-.navbtn{
+
+.navbtn {
     width: 12px;
     height: 14px;
     background-color: black;
-    position: fixed;
-    margin-left: 3px;
-    margin-top: 5.5px;
+    position: absolute;
+    right: -15px;
+    top: 13px;
+    transform: translateY(-50%);
     clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 50% 70%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.nav-a {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* 調整下拉菜單與按鈕之間的間距 */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 6px 0;
+    z-index: 10;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 110px; 
+}
+
+.li-btn:hover .nav-a {
+    display: block;
+}
+
+.nav-a a {
+    display: block;
+    padding: 8px 16px;
+    color: black;
+}
+
+.nav-a a:hover {
+    background-color: #f0f0f0;
 }
 .first-image {
     background-image: url(../image/view2.jpg);
@@ -182,12 +210,21 @@ p {
     z-index: 3;
 }
 #cardh2 {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    margin-left: 1rem;
+    border: 0 solid red;
+    border-left-width: 2px;
 }
 .cardbal {
-    display: flex;
-    flex-wrap: wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+    margin-top: 0.5rem;
     padding: 0 1rem;
+    line-height: 2rem;
+    color: gray;
 }
 .span-div {
     display: flex;
@@ -196,12 +233,15 @@ p {
 
 }
 .card-span {
-    color: gray;
+    color: rgb(180, 180, 180);
 }
 .cash {
     color: red;
     font-weight: bold;
 }
+
+
+
 footer {
     width: 100%;
     height: 400px;

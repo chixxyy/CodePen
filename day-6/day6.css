@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    border: 1px solid black;
+    margin: auto;
+    padding: 10px;
+}
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
+.img {
+    background-image: url(../image/view1.jpg);
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+.left {
+    width: 700px;
+}
+.right {
+    width: calc(100% - 20px - 700px);
+    height: 100px;
+    display: flex;
+    flex-wrap: space-between;
+}
