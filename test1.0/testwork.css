@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    background-color: #F3F4F6;
+}
 
 .header-icon {
     width: 150px;
@@ -280,13 +283,13 @@ p {
 .three-divbtn {
     font-size: 20px;
     font-weight: bold;
-    width: 150px;
+    width: 180px;
     height: 40px;
     cursor: pointer;
     text-align: center;
     padding-top: 10px;
     color: white;
-    background-color: red;
+    background-color: #E41F57;
     border-radius: 999px;
     margin: auto;
 }
@@ -301,7 +304,89 @@ p {
     font-size: 40px;
     font-weight: bold;
 }
+.five-div {
+    display: flex;
+}
+.fivecard {
+    margin: 16px;
+    width: 50%;
+    height: 180px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    padding: 16px 24px;
+    display: flex;
+}
+.images {
+    border-radius: 15px;
+    height: 180px;
+    width: 180px;
+}
+.five-h3 {
+    margin-left: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.fivespan {
+    font-size: 20px;
+}
+#fivepen {
+    margin-top: 30px;
+    width: 24px;
+    height: 24px;
+}
+.spandiv5 {
+    display: flex;
+    color: #BDBDBD;
+    width: 100%;
+    justify-content: space-between;
+}
+.five-btn {
+    margin-bottom: 60px;
+}
+.sixh2 {
+    background-color: #28303E;
+    color: white;
+}
+.sixbox {
+    background-color: #28303E;
+    display: flex;
+    flex-direction: column;
+}
+.sixboxinbox {
+    margin-top: 16px 0;
+    display: flex;
+}
+.siximghead {
+    display: block;
+}
+.sixcard {
+    margin: 20px;
+    width: 50%;
+    background-color: white;
+    border-radius: 20px;
+}
+.siximg {
+    width: 100%;
+    border-radius: 20px;
+}
+.sixh3 {
+    font-size: 36px;
+    margin: 16px 0 ;
 
+}
+.sixtext {
+    font-size: 20px;
+    margin: 16px;
+}
+.sixend {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 24px 16px 16px 0;
+    padding-bottom: 16px;
+    font-weight: bold;
+    color: #E41F57;
+}
 
 .circle {
     width: 48px; 
@@ -309,6 +394,9 @@ p {
     background-color: black; 
     border-radius: 50%; 
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 10px;
     left: 10px;
     z-index: 15;
@@ -336,9 +424,41 @@ p {
     width: 24px;
     height: 24px;
 }
-
+.rocket {
+    width: 30px;
+    height: 30px;
+}
 footer {
     width: 100%;
-    height: 400px;
-    background-color: white;
+    background-color: #28303E;
+    position: relative;
+}
+.footer-section {
+    padding: 20px;
+}
+.footericon {
+    width: 240px;
+    height: 60px;
+}
+.ffb {
+    width: 28px;
+    height: 28px;
+}
+.footerli {
+    list-style: none;
+    color: white;
+    font-weight: bold;
+}
+.footernav {
+    flex-direction: column;
+    justify-content: end;
+}
+.fnavul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    color: white;
+    font-weight: bold;
+    margin: 20px 0;
+    justify-content: end;
 }
