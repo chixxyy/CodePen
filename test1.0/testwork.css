@@ -60,7 +60,7 @@ html {
 .nav-a {
     display: none;
     position: absolute;
-    top: calc(100% + 10px); /* 調整下拉菜單與按鈕之間的間距 */
+    top: calc(100% + 10px);
     left: 0;
     background-color: white;
     border: 1px solid #ccc;
@@ -84,12 +84,39 @@ html {
     color: white;
     background-color: #ff2d2d;
 }
-.first-image {
-    background-image: url(../image/view2.jpg);
-    height: 600px;
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-inner {
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.carousel img {
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    display: block;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
 }
 button {
     text-align: center;
@@ -210,7 +237,7 @@ p {
     border-radius: 50%;
     box-sizing: border-box;
     border: 2px solid rgb(200, 200, 200);
-    background-image: url(../image/img-dog.jpeg);
+    background-image: url(https://dmh6legpso131.cloudfront.net/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--4e08fca243bdc3c68a162cbfd843634f8fce84d3/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOls0MDAsNDAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--f3ce3a687da8d31dcda58034d88ac4546c4280d4/paint.jpg);
     background-size: cover;
     background-position: center;
     z-index: 3;
