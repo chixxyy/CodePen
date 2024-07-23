@@ -1,0 +1,59 @@
+$pathNumber: 18;
+$firstColor: #0057B8;
+$listColors: #F11E4A, #F8A527, #266D7F, #82A, $firstColor;
+$delayCoeff: 0.1s; 
+
+body {
+  background-color: #0057B8;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.svg {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+
+#svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: $firstColor;
+  
+  @for $i from 1 through $pathNumber {
+    path:nth-child(#{$i}) {
+      animation: pweek $delayCoeff * $pathNumber linear infinite;
+      animation-delay: $i * $delayCoeff;
+      
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@mixin generate-keyframes($firstColor, $listColors) {
+  $length: length($listColors);
+
+  // Add initial keyframe
+  0% {
+    fill: $firstColor;
+  }
+  
+  // Add keyframes from listColors
+  @for $i from 1 through $length {
+    $percentage: $i * (100 / $length);
+    $color: nth($listColors, $i);
+    #{$percentage}% {
+      fill: $color;
+    }
+  }
+}
+
+@keyframes pweek {
+  @include generate-keyframes($firstColor, $listColors);
+}

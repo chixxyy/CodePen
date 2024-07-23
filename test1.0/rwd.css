@@ -1,0 +1,71 @@
+@media screen and (max-width: 767px) {
+    html {
+        width: 768px;
+    }
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+    .header-icon {
+        display: none;
+    }
+    .header-nav {
+        flex-direction: column;
+        display: none;
+    }
+    .header-nav a {
+        margin: 0 auto;
+    }
+    .first-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown{
+        display: none;
+    }
+    .header-nav{
+        gap: 1.5rem;
+    }
+    .header-icon {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-nav {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-nav ul {
+        justify-content: flex-end;
+      }
+
+      .header-nav li {
+        margin: 0 20px;
+      }
+      .first-btn {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          gap: 2em;
+          background: rgb(188, 188, 188);
+          flex-wrap: nowrap;
+      }
+      
+      .first-btn .btn {
+          flex-grow: 1;
+          text-align: center;
+          white-space: nowrap;
+    }
+
+}
+/* 大螢幕 */
+@media screen and (min-width: 1440px) {
+    /* 針對大螢幕的樣式 */
+}

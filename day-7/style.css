@@ -12,17 +12,16 @@
     width: 100px;
     border: 1px red solid;
     background: green;
+    overflow: hidden;
+    position: relative;
     transition: all 1s 0s;
 }
-/* .box:hover {
-    height: 200px;
-    background: yellow;
-} */
 .img {
-    background-image: url(../image/view1.jpg);
-    background-size: 100%;
+    background-image: url(https://images.chinatimes.com/newsphoto/2019-08-12/1024/20190812001789.jpg);
+    background-size: 300%;
+    border-radius: 50%;
     height: 100px;
-    width: 300px;
+    width: 100px;
     position: relative;
     transition: all 1s 0s;
     border-width: 5px;
@@ -41,8 +40,19 @@ img::after {
 }
 .img:hover {
     margin: 10px;
-    background-size: 150px;
+    width: 300px;
+    height: 500px;
+    background-size: 500%;
     transition: all 1s 0s;
+}
+.img2:hover {
+    background-image: url(https://images.chinatimes.com/newsphoto/2019-08-12/1024/20190812001789.jpg);
+    margin: 10px;
+    width: 300px;
+    height: 500px;
+    background-size: 500%;
+    transition: all 1s 0s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 h1 {
     position: relative; 
@@ -63,10 +73,11 @@ h1:hover::before {
 }
 h1:hover {
     transition: all 1s;
+    color: white;
 }
-
-
-.qweqwe {
-    height: 200px;
-    background: yellow;
+.div-ul {
+    bottom: 0;
+}
+.ul-li {
+    border-bottom: 1px red solid;
 }
