@@ -1,12 +1,9 @@
 const aa = document.querySelectorAll('.box')
 
-
 aa.forEach((box) => {
     box.addEventListener("mouseover", (event) => {
 
-        box.classList.toggle('xx')
-
-    
+        box.classList.toggle('xx')    
         if (box.classList.contains('xx')) {
             box.style.height = "200px";
             box.style.background = 'yellow';
@@ -19,40 +16,3 @@ aa.forEach((box) => {
         }
     });
 })
-
-// aa
-
-
-// if (!aa.getAttribute('style')) {
-//     aa.addEventListener("mouseover", (event) => {
-//         // aa.classList.add('fuck')
-//         aa.style.height = "100px";
-//         aa.style.background = 'yellow';
-//         console.log(4546);
-//     });
-// }
-
-
-// aa.addEventListener("mouseover", (event) => {
-//     // aa.classList.add('fuck')
-//     aa.style.height = "100px";
-//     aa.style.background = 'green';
-//     console.log(456);
-// });
-
-
-
-
-// const qwe = document.querySelector('.fuck')
-
-
-// if (aa.classList) {
-
-// }
-
-
-// qwe.addEventListener("mouseover", (event) => {console.log(456);});
-
-// aa.classList.remove('fuck')
-
-// onmouseover = (event) => {};

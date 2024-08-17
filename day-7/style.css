@@ -16,44 +16,7 @@
     position: relative;
     transition: all 1s 0s;
 }
-.img {
-    background-image: url(https://images.chinatimes.com/newsphoto/2019-08-12/1024/20190812001789.jpg);
-    background-size: 300%;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    position: relative;
-    transition: all 1s 0s;
-    border-width: 5px;
-    border: red;
-}
-img::after {
-    content: '';
-    width: 100px;
-    height: 50px;
-    background-color: red;
-    display: block;
-    transition: all 1s 0s;
-    position: absolute;
-    left: 0;
 
-}
-.img:hover {
-    margin: 10px;
-    width: 300px;
-    height: 500px;
-    background-size: 500%;
-    transition: all 1s 0s;
-}
-.img2:hover {
-    background-image: url(https://images.chinatimes.com/newsphoto/2019-08-12/1024/20190812001789.jpg);
-    margin: 10px;
-    width: 300px;
-    height: 500px;
-    background-size: 500%;
-    transition: all 1s 0s;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
 h1 {
     position: relative; 
     text-align: center;
@@ -77,7 +40,4 @@ h1:hover {
 }
 .div-ul {
     bottom: 0;
-}
-.ul-li {
-    border-bottom: 1px red solid;
 }
