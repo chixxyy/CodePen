@@ -7,13 +7,17 @@
     width: 100%;
     flex-direction: row;
 }
+.box-outside{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
 .box {
     height: 100px;
-    width: 100px;
+    width: calc(100vw / 9);
     border: 1px red solid;
     background: green;
     overflow: hidden;
-    position: relative;
     transition: all 1s 0s;
 }
 
