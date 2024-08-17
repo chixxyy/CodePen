@@ -1,10 +1,10 @@
 $pathNumber: 18;
 $firstColor: #0057B8;
 $listColors: #F11E4A, #F8A527, #266D7F, #82A, $firstColor;
-$delayCoeff: 0.1s; 
+$delayCoeff: 0.1s;
 
 body {
-  background-color: #0057B8;
+  background-color: $firstColor;
   text-align: center;
   line-height: 100vh;
 }
@@ -23,12 +23,12 @@ body {
   display: inline-block;
   vertical-align: middle;
   fill: $firstColor;
-  
+
   @for $i from 1 through $pathNumber {
     path:nth-child(#{$i}) {
       animation: pweek $delayCoeff * $pathNumber linear infinite;
       animation-delay: $i * $delayCoeff;
-      
+
       &:hover {
         animation-play-state: paused;
       }
@@ -39,16 +39,15 @@ body {
 @mixin generate-keyframes($firstColor, $listColors) {
   $length: length($listColors);
 
-  // Add initial keyframe
   0% {
     fill: $firstColor;
   }
-  
-  // Add keyframes from listColors
+
   @for $i from 1 through $length {
-    $percentage: $i * (100 / $length);
+    $percentage: round(($i / $length) * 100);
     $color: nth($listColors, $i);
-    #{$percentage}% {
+
+    #{inspect($percentage)}% {
       fill: $color;
     }
   }

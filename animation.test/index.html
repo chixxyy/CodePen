@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    background-color: skyblue;
+}
+.container {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    border: 5px solid black;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.box1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border: 10px solid black;
+}
+.bar1 {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    animation: go1 .5s infinite alternate;
+}
+.bar1:first-child {
+    left: 0;
+    top: 0;
+    }
+.bar1:nth-child(2) {
+    inset: 0;
+    margin: auto;
+    }
+.bar1:last-child {
+    bottom: 0;
+    right: 0;
+    }
+@keyframes go1 {
+    0% {
+        width: 100%;
+        height: 40px;
+    }    
+    50% {
+        width: 40px;
+        height: 40px;
+    }    
+    100% {
+        width: 40px;
+        height: 100%;
+    }
+}
+
+.box2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border: 10px solid #000;
+}
+.bar2 {
+    width: 40px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+}
+.bar2:first-child {
+    left: 0;
+    animation: go2 1s infinite;
+}
+.bar2:nth-child(2) {
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: go2 1s .3s infinite;
+}
+.bar2:last-child {
+    right: 0;
+    animation: go2 1s .6s infinite;
+}
+
+@keyframes go2 {
+    0% {
+        bottom: 0;
+    } 50% {
+        bottom: 50px;
+    } 100% {
+        bottom: 0;
+    }
+}
+
+.box3 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border: 10px solid #000;
+}
+.bar3 {
+    width: 40px;
+    height: 0;
+    position: absolute;
+    background: #fff;
+    top: 0;
+}
+.bar3:first-child {
+    left: 0;
+    animation: go3 1s infinite alternate;
+}
+.bar3:nth-child(2) {
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: go3 1s .3s infinite alternate;
+}
+.bar3:last-child {
+    right: 0;
+    animation: go3 1s .6s infinite alternate;
+}
+
+@keyframes go3 {
+    from {
+        height: 0;
+        top: 0;
+    } to {
+        height: 100%;
+        top: 0;
+    }
+}
+
+.box4 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border: 10px solid #000;
+}
+.bar4 {
+    width: 40px;
+    height: 0;
+    position: absolute;
+    background: #fff;
+    top: 0;
+}
+.bar4:first-child {
+    left: 0;
+    animation: go4 .5s infinite;
+}
+.bar4:nth-child(2) {
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: go4 .5s .1s infinite;
+}
+.bar4:last-child {
+    right: 0;
+    animation: go4 .5s .2s infinite;
+}
+
+@keyframes go4 {
+    0% {
+        height: 0;
+        top: 0;
+    } 50% {
+        height: 100%;
+        top: 0;
+    } 100% {
+        height: 0;
+        top: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1">
+        <div class="bar1"></div>
+        <div class="bar1"></div>
+        <div class="bar1"></div>    
+    </div>
+    <div class="box2">
+        <div class="bar2"></div>
+        <div class="bar2"></div>
+        <div class="bar2"></div>
+    </div>
+    <div class="box3">
+        <div class="bar3"></div>
+        <div class="bar3"></div>
+        <div class="bar3"></div>
+    </div>
+    <div class="box4">
+        <div class="bar4"></div>
+        <div class="bar4"></div>
+        <div class="bar4"></div>
+    </div>
+</div>
+</body>
+</html>

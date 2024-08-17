@@ -1,0 +1,117 @@
+.content{
+    position: relative;
+    height: 100vh;
+}
+
+.ball {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.box1 {
+    width: 200px;
+    height: 100px;
+    background: red;
+    border: 5px solid black;
+    position: relative;
+    border-radius: 100px 100px 0 0;
+    z-index: 3;
+}
+.box2 {
+    margin-top: -5px;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border: 5px solid black;
+    border-radius: 100px 100px 0 0;
+    rotate: 180deg;
+    z-index: 2;
+}
+.box1::after {
+    content: '';
+    height: 40px;
+    width: 40px;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    background: white;
+    margin: auto;
+    box-shadow: 0 0 0 5px #fff,0 0 0 10px #000;
+    z-index: 3;
+}
+.content:hover .box1 {
+    animation: run 1s alternate infinite;
+}
+.content:hover .box2 {
+    animation: run2 1s alternate infinite;
+}
+.content:hover .face {
+    animation: go 1s infinite alternate;
+}
+@keyframes run {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -150px;
+        rotate: 40deg;
+    }
+}
+@keyframes run2 {
+    100%{
+        rotate: 140deg;
+        bottom: -150px;
+    }
+}
+
+.face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    border: 2px solid black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.eye {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+}
+.left-eye {
+    top: 28px;
+    left: 24px;
+}
+.right-eye {
+    top: 28px;
+    right: 24px;
+}
+.mouth {
+    position: absolute;
+    width: 24px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 0 0 24px 24px;
+    top: 48px;
+    left: 28px;
+}
+@keyframes go {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg)
+    }
+    100% {
+        transform: translate(-300%, -50%) rotate(360deg);
+    }
+}
