@@ -1,0 +1,79 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(60deg, #420285, #08bdbd);
+    color: #333;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.carousel {
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    filter: drop-shadow(0 2px 2px #555);
+    will-change: transform, opacity;
+}
+.item-body {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px 20px;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+}
+@keyframes carousel-animation {
+    0% {
+        translate: 0 100%;
+        scale: 0.5;
+        opacity: 0;
+        visibility: hidden;
+    }
+    3%, 11% {
+        translate: 0 100%;
+        scale: 0.7;
+        opacity: 0.4;
+        visibility: visible;
+    }
+    14%, 22% {
+        translate: 0 0;
+        scale: 1;
+        opacity: 1;
+        visibility: visible;
+    }
+    25%, 33% {
+        translate: 0 -100%;
+        scale: 0.7;
+        opacity: 0.4;
+        visibility: visible;
+    }
+    36% {
+        translate: 0 -100%;
+        scale: 0.5;
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        translate: 0 -100%;
+        scale: 0.5;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.item {
+    --animation-delay-fraction: 3s;
+    animation: carousel-animation 27s linear infinite;
+    animation-delay: calc(var(--animation-delay-fraction) * (var(--index) - 3));
+}
