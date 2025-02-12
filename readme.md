@@ -8,4 +8,4 @@
 
 2. Medium：[Medium 網址](https://medium.com/@chixxyy)
 
-![預覽](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3l2OWJhdjVnNjcxYzlkMHl3YmZ0eGpzM3hhMTdrMzdzdm9pZmNyMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zgduo4kWRRDVK/giphy.gif)
+![預覽](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGNpcGF0dnhuNWVtYWtiMDc0Y2thbWR6c2p5NzIxemlqaWF2dW53bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lBm4rgtyIPJmywXzLW/giphy.gif)
