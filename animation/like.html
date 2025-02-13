@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>like</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #333;
+            border-radius: 50%;
+        }
+
+        .icon {
+            font-size: 70px;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            color: #1288FE;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fa-regular fa-thumbs-up icon" onclick="like()" id="like"></i>
+    </div>
+
+    <script>
+        function like() {
+            let like = document.getElementById('like');
+            if (like.classList.contains('fa-regular')) {
+                like.classList.remove('fa-regular');
+                like.classList.add('fa-solid');
+            } else {
+                like.classList.remove('fa-solid');
+                like.classList.add('fa-regular');
+            }
+        }
+    </script>
+</body>
+</html>
