@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>多步驟表單</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="form1">
+            <h3>建立帳號</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+
+            <div class="btn-box">
+                <button type="button" id="next1">下一步</button>
+            </div>
+
+        </form>
+        <form id="form2">
+            <h3>社群連結</h3>
+            <input type="text" placeholder="Instagram">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="Facebook">
+
+
+            <div class="btn-box">
+                <button type="button" id="back1">返回</button>
+                <button type="button" id="next2">送出</button>
+            </div>
+
+        </form>
+        <form id="form3">
+            <h3>個人資料</h3>
+            <input type="text" placeholder="姓氏" required>
+            <input type="text" placeholder="名字" required>
+            <input type="text" placeholder="電話" required>
+
+
+            <div class="btn-box">
+                <button type="button" id="back2">返回</button>
+                <button type="button" id="submit">送出</button>
+            </div>
+
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>步驟一</small></div>
+            <div class="step-col"><small>步驟二</small></div>
+            <div class="step-col"><small>步驟三</small></div>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
