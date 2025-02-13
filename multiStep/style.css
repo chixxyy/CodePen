@@ -22,7 +22,7 @@ body{
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
 }
 
 h3{
@@ -31,12 +31,12 @@ h3{
     color: #777;
 }
 
-.contaier form{
+.container form{
     width: 280px;
     position: absolute;
     top: 100px;
     left: 40px;
-    transform: 0.5s;
+    transition: 0.5s;
 }
 
 form input{
@@ -60,11 +60,11 @@ form input{
 }
 
 form button{
-    width: 110px;
+    width: 100px;
     height: 35px;
     margin: 0 10px;
     background: linear-gradient(to right, #1565c0, #1976d2);
-    border-radius: 20px;
+    border-radius: 30px;
     border: 0;
     outline: none;
     color: #fff;
@@ -73,11 +73,11 @@ form button{
     font-size: 0.8em;
 }
 
-#form2 {
+#form2{
     left: 450px;
 }
 
-#form3 {
+#form3{
     left: 450px;
 }
 
@@ -99,10 +99,10 @@ form button{
 }
 
 #progress{
-    width: 120px;
-    height: 100%;
-    background: linear-gradient(to right, #1565c0, #1976d2);
     position: absolute;
+    height: 100%;
+    width: 120px;
+    background: linear-gradient(to right, #1565c0, #1976d2);
 }
 
 small{
@@ -113,8 +113,8 @@ small{
 
 #progress::after{
     content: '';
-    width: 0;
     height: 0;
+    width: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     position: absolute;
