@@ -34,7 +34,15 @@ h2 span{
     color: #895cf3;
 }
 
-.warpper-1 input{
+.wrapper-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 70px 0;
+    gap: 10px;
+}
+
+.wrapper-1 input{
     width: 100px;
     font-size: 30px;
     font-weight: 600;
@@ -53,12 +61,18 @@ input:focus{
 }
 
 label{
+    color: #170444;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.box{
     display: flex;
     justify-content: space-between;
     gap: 15px;
 }
 
-.warpper-2 input, .warpper-3 input{
+.wrapper-2 input, .wrapper-3 input{
     width: 100%;
     font-size: 18px;
 }
