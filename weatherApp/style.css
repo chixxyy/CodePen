@@ -17,7 +17,7 @@ body{
 .container{
     position: relative;
     width: 400px;
-    height: 200px;
+    height: 105px;
     background: #fff;
     padding: 28px 32px;
     overflow: hidden;
@@ -26,7 +26,7 @@ body{
     transition: 0.6s ease-out;
 }
 
-.serach-box{
+.search-box{
     width: 100%;
     height: min-content;
     display: flex;
@@ -34,23 +34,23 @@ body{
     justify-content: space-between;
 }
 
-.serach-box input{
+.search-box input{
     color: #06283D;
     width: 80%;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     padding-left: 32px;
 }
 
-.serach-box input::placeholder{
+.search-box input::placeholder{
     font-size: 20px;
     font-weight: 500;
     color: #06283D;
     text-transform: capitalize;
 }
 
-.serach-box button{
+.search-box button{
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -61,12 +61,12 @@ body{
     transition: 0.4s ease;
 }
 
-.serach-box button:hover{
+.search-box button:hover{
     color: #fff;
     background: #06283D;
 }
 
-.serach-box i{
+.search-box i{
     position: absolute;
     color: #06283D;
     font-size: 28px;
@@ -81,63 +81,69 @@ body{
     margin-top: 30px;
 }
 
-.weather-box .temperture{
+.weather-box .temperature{
     position: relative;
     color: #06283D;
     font-size: 4rem;
     font-weight: 800;
     margin-top: 30px;
-    margin-left: 1.5rem;
+    margin-left: -16px;
+}
+
+.weather-box .temperature span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
 }
 
 .weather-box .description{
     color: #06283D;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
-.weather-datails{
+.weather-details{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.weather-datails .humidity, .weather-datails .wind{
+.weather-details .humidity, .weather-details .wind{
     display: flex;
     align-items: center;
     width: 50%;
     height: 100px;
 }
 
-.weather-datails .wind{
-    padding-right: 20px;
-    justify-content: flex-end;
-}
-
-.weather-datails .humidity{
+.weather-details .humidity{
     padding-left: 20px;
     justify-content: flex-start;
 }
 
-.weather-datails i{
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i{
     color: #06283D;
     font-size: 26px;
     margin-right: 10px;
     margin-top: 6px;
 }
 
-.weather-datails span{
+.weather-details span{
     color: #06283D;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.weather-datails p{
+.weather-details p{
     color: #06283D;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .not-found{
@@ -156,11 +162,11 @@ body{
 .not-found p{
     color: #06283D;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 12px;
 }
 
-.weather-box, .weather-datails{
+.weather-box, .weather-details{
     scale: 0;
     opacity: 0;
 }
@@ -171,7 +177,7 @@ body{
 }
 
 @keyframes fadeIn{
-    to{
+    to {
         scale: 1;
         opacity: 1;
     }
