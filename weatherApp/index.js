@@ -3,10 +3,11 @@ const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
+const inputField = document.querySelector(".search-box input");
 
-search.addEventListener("click", () => {
+const fetchWeather = () => {
   const APIKey = "6621ddde4480de436a103cc6fed1d191";
-  const city = document.querySelector(".search-box input").value;
+  const city = inputField.value;
 
   if (city === "") return;
 
@@ -71,4 +72,12 @@ search.addEventListener("click", () => {
       weatherDetails.classList.add("fadeIn");
       container.style.height = "590px";
     });
+};
+
+search.addEventListener("click", fetchWeather);
+
+inputField.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    fetchWeather();
+  }
 });
