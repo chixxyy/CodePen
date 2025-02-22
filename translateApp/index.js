@@ -102,6 +102,8 @@ const countries = {
   "xh-ZA": "科薩語",
   "yi-YD": "意第緒語",
   "zu-ZA": "祖魯語",
+  "zh-TW": "繁體中文",
+  "zh-CN": "簡體中文",
 };
 
 selectTag.forEach((tag, id) => {
@@ -111,7 +113,7 @@ selectTag.forEach((tag, id) => {
         ? country_code == "en-GB"
           ? "selected"
           : ""
-        : country_code == "de-DE"
+        : country_code == "zh-TW"
         ? "selected"
         : "";
     let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
