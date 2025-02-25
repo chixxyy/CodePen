@@ -12,7 +12,7 @@ fetch(
       const change = coinInfo.usd_24h_change.toFixed(5);
 
       container.innerHTML += `
-                <div class="coin ${change < 0 ? "下跌" : "上升"}">
+                <div class="coin ${change < 0 ? "falling" : "rising"}">
                     <div class="coin-logo">
                         <img src="${coin}.png">
                     </div>
