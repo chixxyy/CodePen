@@ -30,11 +30,9 @@ function textToSpeech(text) {
 speechBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (textarea.value !== "") {
-    // Checks if not speaking, Speak Textarea Text
     if (!synth.speaking) {
       textToSpeech(textarea.value);
     }
-    // If text was long, Add Resume and Pause Function
     if (textarea.value.length > 80) {
       setInterval(() => {
         if (!synth.speaking && !isSpeaking) {
