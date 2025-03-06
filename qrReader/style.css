@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -21,8 +21,8 @@ body{
     width: 420px;
     background-color: #334155;
     border-radius: 7px;
-    padding: 30px;
-    transform: all 0.2s ease;
+    padding: 30px 30px 35px;
+    transition: all 0.2s ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,7 +50,7 @@ body{
 
 form img{
     display: none;
-    max-width: 150px;
+    max-width: 148px;
 }
 
 .wrapper.active form img{
@@ -78,7 +78,7 @@ form .content p{
     pointer-events: none;
 }
 
-.wrapper.active .datails{
+.wrapper.active .details{
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.5s 0.05s ease;
@@ -86,7 +86,7 @@ form .content p{
 
 .details textarea{
     width: 100%;
-    height: 100px;
+    height: 128px;
     outline: none;
     resize: none;
     color: #fff;
