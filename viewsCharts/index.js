@@ -7,6 +7,11 @@ const chartOptions = {
   },
   colors: ["#3498db"],
   series: [{ name: "Views", data: [18, 50, 42, 94, 41, 65] }],
+  //   fetch("https://api.example.com/chart-data")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     chart.updateSeries([{ name: "Views", data: data.views }]);
+  //   });
   dataLabels: { enabled: false },
   stroke: { width: 3, curve: "smooth" },
   fill: {
