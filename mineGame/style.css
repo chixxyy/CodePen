@@ -2,15 +2,15 @@ body{
     background-color: #263238;
     color: #ddd;
     font-family: courier;
-    justify-content: center;
-    align-items: center;
     display: grid;
+    align-content: center;
+    justify-content: center;
     height: 100vh;
     overflow: hidden;
 }
 
 h1{
-    font-size: 14px;
+    font-size: 14pt;
     font-weight: normal;
 }
 

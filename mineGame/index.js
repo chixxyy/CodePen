@@ -15,7 +15,7 @@ function generateGrid() {
       };
       var mine = document.createAttribute("mine");
       mine.value = "false";
-      cell.setAttributNode(mine);
+      cell.setAttributeNode(mine);
     }
   }
   generateMines();
@@ -66,13 +66,11 @@ function init(cell) {
   if (lockGame) {
     return;
   } else {
-    // Check user clicked on mine
     if (cell.getAttribute("mine") == "true") {
       revealMines();
       lockGame = true;
     } else {
       cell.className = "active";
-      // Display number of mines around cell
       var mineCount = 0;
       var cellRow = cell.parentNode.rowIndex;
       var cellCol = cell.cellIndex;
@@ -93,7 +91,6 @@ function init(cell) {
       }
       cell.innerHTML = mineCount;
       if (mineCount == 0) {
-        // if cell don't have mine
         for (
           var i = Math.max(cellRow - 1, 0);
           i <= Math.min(cellRow + 1, 9);
