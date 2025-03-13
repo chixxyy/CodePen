@@ -56,7 +56,7 @@ function searchMeal() {
     .catch(() => {
       searchContainer.style.opacity = "1";
       searchContainer.style.display = "grid";
-      resultContainer.innerHTML = `<h3>查無資料</h3>`;
+      resultContainer.innerHTML = `<h3>查無資料！</h3>`;
     });
 }
 

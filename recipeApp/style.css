@@ -11,7 +11,7 @@ body{
 }
 
 .container{
-    background-color: #2c333e;
+    background-color: #1e293b;
     padding: 35px 20px 40px;
     width: 90vw;
     max-width: 512px;
@@ -55,7 +55,7 @@ img{
     border-radius: 6px;
 }
 
-.datails{
+.details{
     background-color: #faa301;
     position: relative;
     text-align: center;
@@ -63,12 +63,12 @@ img{
     border-radius: 10px;
 }
 
-.datails h2{
+.details h2{
     font-size: 17px;
     font-weight: 600;
 }
 
-.datails h4{
+.details h4{
     font-size: 15px;
     font-weight: 400;
 }
