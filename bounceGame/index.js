@@ -96,6 +96,8 @@ function hitDetection() {
     }
 }
 
+let interval = setInterval(init, 10);
+
 function init() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     trackScore();
@@ -115,6 +117,7 @@ function init() {
             dy = -dy;
         } else {
             alert('遊戲結束！');
+            clearInterval(interval)
             document.location.reload();
         }
     }

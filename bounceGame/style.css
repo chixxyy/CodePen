@@ -8,6 +8,8 @@ body{
 
 #game{
     background-color: #ccc;
-    margin-top: 10rem;
+    margin: 10px auto;
+    padding: auto;
+    max-width: 100%;
     border: 2px solid #333;
 }
