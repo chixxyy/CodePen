@@ -30,25 +30,43 @@ userInput.value = '';
 
 const options = {
     method: 'POST',
-	headers: {
-		'x-rapidapi-key': '668afa06aamsh03468ec085837f5p137741jsna721deb26474',
-		'x-rapidapi-host': 'chatgpt-42.p.rapidapi.com',
-		'Content-Type': 'application/json'
-	},
-    body: `{"messages":[{"role":"user","content":"${message}"}]}`
+    headers: {
+        'x-rapidapi-key': '668afa06aamsh03468ec085837f5p137741jsna721deb26474',
+        'x-rapidapi-host': 'chatgpt-42.p.rapidapi.com',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        messages: [
+            {
+                role: 'user',
+                content: 'hello'
+            }
+        ],
+        web_access: false
+    })
 };
 
-fetch('https://chatgpt-42.p.rapidapi.com/chatgpt', options).then((response) => response.json()).then((response) => {
-    appendMessage('bot', response.message[0].content);
-    buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
-    buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
-}).catch((err) => {
-    if (err.name === 'TypeError') {
-        appendMessage('bot', '無法連到伺服器');
+fetch('https://chatgpt-42.p.rapidapi.com/chatgpt', options)
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`錯誤: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then((response) => {
+        appendMessage('bot', response.result);
+
         buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
         buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
-    }
-});
+    })
+    .catch((err) => {
+        console.error('發生錯誤:', err);
+
+        appendMessage('bot', `錯誤: ${err.message}`);
+
+        buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
+        buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
+    });
 }
 
 function appendMessage(sender, message) {
