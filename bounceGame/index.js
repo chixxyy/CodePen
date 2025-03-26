@@ -54,7 +54,7 @@ function toggleGame() {
 
 function updateButton() {
     let button = document.getElementById('toggleBtn');
-    button.textContent = isRunning ? '停止遊戲' : '開始遊戲';
+    button.textContent = isRunning ? '重置遊戲' : '開始遊戲';
 }
 
 document.getElementById('toggleBtn').addEventListener('click', toggleGame);
