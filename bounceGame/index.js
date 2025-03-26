@@ -1,15 +1,11 @@
 let canvas = document.getElementById('game'),
     ctx = canvas.getContext('2d'),
     ballRadius = 9,
-    x = canvas.width / (Math.floor(Math.random() * Math.random() * 10) + 3),
-    y = canvas.height - 40,
-    dx = 2,
-    dy = -2;
+    x, y, dx, dy, interval;
 
 let paddleHeight = 12,
-    paddleWidth = 72;
-
-let paddleX = (canvas.width - paddleWidth) / 2;
+    paddleWidth = 72,
+    paddleX;
 
 let rowCount = 5,
     columnCount = 9,
@@ -18,15 +14,50 @@ let rowCount = 5,
     brickPadding = 12,
     topOffset = 40,
     leftOffset = 33,
-    score = 0;
+    score = 0,
+    isRunning = false;
 
 let bricks = [];
-for (let c = 0; c < columnCount; c++) {
-    bricks[c] = [];
-    for (let r = 0; r < rowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
+function initBricks() {
+    bricks = [];
+    for (let c = 0; c < columnCount; c++) {
+        bricks[c] = [];
+        for (let r = 0; r < rowCount; r++) {
+            bricks[c][r] = { x: 0, y: 0, status: 1 };
+        }
     }
 }
+
+function resetGame() {
+    x = canvas.width / 2;
+    y = canvas.height - 40;
+    dx = 2;
+    dy = -2;
+    paddleX = (canvas.width - paddleWidth) / 2;
+    score = 0;
+    initBricks();
+    if (interval) clearInterval(interval);
+    interval = setInterval(init, 10);
+    isRunning = true;
+    updateButton();
+}
+
+function toggleGame() {
+    if (isRunning) {
+        clearInterval(interval);
+        isRunning = false;
+    } else {
+        resetGame();
+    }
+    updateButton();
+}
+
+function updateButton() {
+    let button = document.getElementById('toggleBtn');
+    button.textContent = isRunning ? '停止遊戲' : '開始遊戲';
+}
+
+document.getElementById('toggleBtn').addEventListener('click', toggleGame);
 
 document.addEventListener("mousemove", mouseMoveHandler, false);
 
@@ -87,16 +118,16 @@ function hitDetection() {
                     b.status = 0;
                     score++;
                     if (score === rowCount * columnCount) {
+                        clearInterval(interval);
                         alert('你贏了！');
-                        document.location.reload();
+                        isRunning = false;
+                        updateButton();
                     }
                 }
             }
         }
     }
 }
-
-let interval = setInterval(init, 10);
 
 function init() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -116,18 +147,15 @@ function init() {
         if (x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
         } else {
+            clearInterval(interval);
             alert('遊戲結束！');
-            clearInterval(interval)
-            document.location.reload();
+            isRunning = false;
+            updateButton();
         }
-    }
-
-    if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-        dy = -dy;
     }
 
     x += dx;
     y += dy;
 }
 
-setInterval(init, 10);
+resetGame();

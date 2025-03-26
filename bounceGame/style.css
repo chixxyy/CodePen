@@ -1,15 +1,31 @@
-body{
-    height: 100%;
+body {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #efefef;
+    margin: 0;
 }
 
-#game{
+#game {
     background-color: #ccc;
-    margin: 10px auto;
-    padding: auto;
-    max-width: 100%;
     border: 2px solid #333;
+    display: block;
+}
+
+#toggleBtn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#toggleBtn:hover {
+    background-color: #555;
 }
