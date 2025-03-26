@@ -23,9 +23,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 #toggleBtn:hover {
-    background-color: #555;
+    background-color: #777;
 }
