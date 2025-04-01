@@ -5,7 +5,6 @@ function fetchTopStocks() {
     fetch('https://www.alphavantage.co/query?function=SECTOR&apikey=YAWLU5KC5N2EK0IU')
         .then(response => response.json())
         .then(data => {
-            console.log('API Response:', data); // 新增這行來檢查回應
             const stocks = data['Rank A: Real-Time Performance'];
 
             if (!stocks) {
@@ -18,7 +17,7 @@ function fetchTopStocks() {
             for (let i = 0; i < Math.min(10, symbols.length); i++) {
                 const symbol = symbols[i];
                 const change = stocks[symbol];
-                const changeColor = parseFloat(change) > 0 ? 'green' : 'red';
+                const changeColor = parseFloat(change) >= 0 ? 'green' : 'red';
                 html += `
                 <li>
                     <span class="symbol">${symbol}</span>
