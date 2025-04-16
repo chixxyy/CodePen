@@ -1,20 +1,26 @@
 new TradingView.widget(
     {
         "autosize": true,
-        "symbol": "BINANCE:BTCUSDT",
-        "interval": "240",
+        "symbol": "NVDA",
+        "interval": "60",
         "timezzone": "Etc/Utc",
         "theme": "dark",
         "style": "1",
-        "locale": "en",
+        "locale": "zh_TW",
         "toolbar_bg": "#f1f3f6",
         "enable_publishing": true,
         "withdateranges": false,
         "hide_side_toolbar": true,
         "allow_symbol_change": true,
         "watchlist": [
-            "BINANCE:BTCUSDT",
-            "BINANCE:ETHUSDT"
+            "NVDA",
+            "AMD",
+            "TSLA",
+            "AAPL",
+            "AMZN",
+            "TSM",
+            "INTC",
+            "PLTR"
         ],
         "details": true,
         "hotlist": true,
