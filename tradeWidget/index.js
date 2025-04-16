@@ -20,7 +20,11 @@ new TradingView.widget(
             "AMZN",
             "TSM",
             "INTC",
-            "PLTR"
+            "PLTR",
+            "VOO",
+            "QQQ",
+            "SPY",
+            "VYM"
         ],
         "details": true,
         "hotlist": true,
