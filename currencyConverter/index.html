@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>匯率換算器</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>匯率換算</h2>
+        <form>
+            <div class="amount">
+                <p>金額</p>
+                <input type="text" value="1">
+            </div>
+            <div class="convert-box">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-input">
+                        <img src="https://flagcdn.com/48x36/us.png">
+                        <select></select>
+                    </div>
+                </div>
+                <div class="reverse"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-input">
+                        <img src="https://flagcdn.com/48x36/tw.png">
+                        <select></select>
+                    </div>
+                </div>
+                <div class="result">換算匯率中...</div>
+                <button>換算匯率</button>
+
+            </div>
+        </form>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
