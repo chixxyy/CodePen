@@ -6,10 +6,11 @@ const amount = document.querySelector(".amount input");
 const exRateTxt = document.querySelector(".result");
 const apiKey = "400225e6be45451cb35d179c669ffd64";
 let Country_List = {
-    USD: "United States",
-    EUR: "Euro",
-    JPY: "Japan",
-    TWD: "Taiwan",
+    USD: "US",
+    EUR: "EU",
+    JPY: "JP",
+    TWD: "TW",
+    CNY: "CN",
 };
 window.addEventListener("load", () => {
   if (!fromCur || !toCur) {
