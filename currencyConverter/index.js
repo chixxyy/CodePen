@@ -14,7 +14,7 @@ let Country_List = {
 };
 window.addEventListener("load", () => {
   if (!fromCur || !toCur) {
-    console.error("One or both select elements not found");
+    console.error("資料錯誤...");
     console.log("fromCur:", fromCur);
     console.log("toCur:", toCur);
     return;
