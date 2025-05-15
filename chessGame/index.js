@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const possibleMoves = game.moves();
 
         if (game.game_over()) {
-            alert('你輸了！');
+            alert('遊戲結束');
         } else {
             const randomIdx = Math.floor(Math.random() * possibleMoves.length);
             const move = possibleMoves[randomIdx];
@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
             onDrop,
             onSnapEnd,
             moveSpeed: 'fast',
-            sanpBackSpeed: 500,
-            sanpSpeed: 100,
+            snapbackSpeed: 500,
+            snapSpeed: 100,
         };
 
         board = ChessBoard('board', boardConfig);
 
-        document.querySelector('play-again').addEventListener('click', () => {
+        document.querySelector('.play-again').addEventListener('click', () => {
             game.reset();
             board.start();
             moveHistory.textContent = '';
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.querySelector('.set-pos').addEventListener('click', () => {
-            const fen = prompt('請輸入FEN');
+            const fen = prompt('請輸入位置');
             if (fen !== null) {
                 if (game.load(den)) {
                     board.position(fen);
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     moveCount = 1;
                     userColor = 'w';
                 } else {
-                    alert('無效的FEN');
+                    alert('無效的位置');
                 }
             }
         });
