@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chessboard-1.0.0.min.css">
+    <title>西洋棋</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>西洋棋</h1>
+        <div class="board" id="board"></div>
+        <div class="buttons">
+            <button class="play-again">在玩一次</button>
+            <button class="set-pos">位子</button>
+            <button class="flip-board">翻板</button>
+        </div>
+        <div id="move-history" class="move-history"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="chessboard-1.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
