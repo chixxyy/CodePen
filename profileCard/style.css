@@ -95,6 +95,11 @@ body{
     color: #801313;
 }
 
-.card footer button.youtube:hover{
+.card footer button.youtube:hover, .card footer button.reset:hover{
     color: #fff;
+}
+
+.card footer button.reset{
+    background-color: #fb8c00;
+    color: #943604;
 }
