@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>傳送郵件</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gradient-section">
+            <div class="gradient"></div>
+            <div class="gradient-content">
+                <h1 class="heading">歡迎來到我們的 <span>創意</span> 中心！</h1>
+                <p class="paragraph">通往創意世界的入口從這裡開始</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>嗨，朋友！</h2>
+            <p>歡迎使用我們的電子郵件寄件表單！</p>
+            <form>
+                <div class="form-group">
+                    <label for="to">收件人：</label>
+                    <input type="text" id="to" name="to" required autocomplete="off" placeholder="Example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">主旨：</label>
+                    <input type="text" id="subject" name="subject" required autocomplete="off"
+                        placeholder="合作請求">
+                </div>
+                <div class="form-group">
+                    <label for="message">訊息：</label>
+                    <textarea id="message" name="message" required spellcheck="false" autocomplete="off"
+                        placeholder="您的文字..."></textarea>
+                </div>
+                <div class="form-group result-container">
+                    <p class="result">電子郵件已成功寄出</p>
+                    <button type="button" class="send-btn">寄送郵件</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
